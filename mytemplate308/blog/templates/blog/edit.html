@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Edit</title>
+</head>
+<body>
+    <form action="{% url 'blog:edit_post' post.id %}" method="post">
+        {% csrf_token %}
+        <label for="title"> Title </label>
+        <input type="text" name="title" id="{{ post.id }}" value="{{ post.title }}">
+        <br>
+        <label for="content"> Content </label>
+        <input type="text" name="content" value="{{ post.content }}">
+        <br>
+        <input type="submit" value="Edit">
+    </form>
+</body>
+</html>

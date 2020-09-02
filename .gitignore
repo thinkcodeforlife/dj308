@@ -1,0 +1,10 @@
+# dir
+.idea/
+
+# db
+*.sqlite3
+*migrations/
+
+# Py
+*__pycache__/
+*.pyc

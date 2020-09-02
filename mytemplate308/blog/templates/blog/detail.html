@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Details</title>
+</head>
+<body>
+
+    {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+
+    {% if post %}
+        <h1> <a href="{% url 'blog:edit' post.id %}">{{ post.title }}</a> </h1>
+        <span> {{ post.content }} </span>
+    {% endif %}
+
+</body>
+</html>
